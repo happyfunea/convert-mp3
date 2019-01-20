@@ -71,5 +71,5 @@ try:
 		bang = lagu(syes)
 		bang.donlot(out)
 except IndexError:
-	print 'Ex : python2 yt.py <url yutub> <output>'
+	print 'Ex : python2 convert.py <url yutub> <outputfile>'
 	sys.exit()
