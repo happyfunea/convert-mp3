@@ -4,7 +4,7 @@
 try:
 	import requests
         import subprocess as a
-	import urllib, threading
+	import urllib
 	import sys, time as molor
 	import re, logging
 	import mechanize
