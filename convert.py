@@ -38,12 +38,14 @@ class lagu:
 		
 	def donlot(self, output):
 		try:
+			print '(INFO) : Tunggu...'
 			logging.warning(' Title Music : {}'.format(self.title[0]))
 			if 'Your MP3 Is Ready' in self.cek[0]:
 				print 'STATUS | Loading For Download'
 				self.gut = requests.get('http://www.convertmp3.io/download{}'.format(self.reg[0]))
 				self.bat = urllib.urlretrieve(self.gut.url, output+'.mp3')
-				print 'STATUS | (S)uccess!!\nOUTPUT | {}'.format(output+'.mp3')
+				print 'STATUS | (S)uccess!!\nOUTPUT | storage/emulated/0/{}'.format(output+'.mp3')
+				a.call('mv '+output+'.mp3 /sdcard', shell=True)
 			elif 'No video was found' in self.title[0]:
 				logging.error( '(T)idak Di Temukan')
 				sys.exit()
